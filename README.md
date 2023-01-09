@@ -1,6 +1,6 @@
 <div align="center">
   <a href="">
-    <img src="./spring.png" width="150">
+    <img src="https://avatars.githubusercontent.com/u/122161001?s=96&v=4" width="150">
   </a>
 </div>
 

@@ -4,6 +4,7 @@
   "author": "erkelost",
   "scripts": {
     "postplop": "pnpm i",
+    "bootstrap": "pnpm install",
     "build:dev": "turbo run build dev",
     "build:dev:filter": "turbo run build dev --filter=@relaxed/hook",
     "build": "turbo run build",

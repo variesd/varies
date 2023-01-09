@@ -108,6 +108,12 @@ importers:
   packages/hook:
     specifiers: {}
 
+  packages/utils:
+    specifiers:
+      '@variesd/animated': workspace:*
+    dependencies:
+      '@variesd/animated': link:../animated
+
   packages/vue:
     specifiers:
       '@variesd/core': workspace:*

@@ -53,7 +53,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "vite build --watch"
+    "build": "vite build"
   },
   "publishConfig": {
     "access": "public",

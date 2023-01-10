@@ -28,13 +28,13 @@
     "url": "https://github.com/erkelost/jzzx/issues"
   },
   "scripts": {
+    "test": "yarn lint && yarn type",
+    "dev": "vitepress dev jzzx --port 6173",
+    "build:variesd": "vitepress build jzzx",
+    "serve": "yarn jzzx-build && vitepress serve jzzx",
     "lint": "prettier --check --write --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
     "lint:fail": "prettier --check --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
-    "type": "tsc --noEmit",
-    "test": "yarn lint && yarn type",
-    "dev": "vitepress dev jzzx",
-    "build:variesd": "vitepress build jzzx",
-    "serve": "yarn jzzx-build && vitepress serve jzzx"
+    "type": "tsc --noEmit"
   },
   "dependencies": {
     "@docsearch/css": "^3.3.0",

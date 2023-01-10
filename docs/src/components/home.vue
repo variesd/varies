@@ -6,55 +6,51 @@
 <template>
   <section id="hero">
     <h1 class="tagline">
-      The
-      <span class="accent">Value Online</span>
-      <br />Front end architecture
+      Use
+      <span class="accent"> Animation Library</span>
+      <br />Simple With Easy
     </h1>
     <p class="description">
-      <span class="accent">面向未来</span>
-      价值在线前端 规范 与 生态.
+      <span class="accent">Elegant and Supple </span>
+      interactive animation.
     </p>
     <p class="actions">
-      <a
-        class="get-started"
-        href="/code-specification/build-specification/rollup/index.html"
-      >
-        现在开始
-        <svg
-          class="icon"
-          xmlns="http://www.w3.org/2000/svg"
-          width="10"
-          height="10"
-          viewBox="0 0 24 24"
+      <Button>
+        <a
+          class="get-started"
+          href="/code-specification/build-specification/rollup/index.html"
         >
-          <path
-            d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z"
-          />
-        </svg>
-      </a>
-      <a class="setup" href="#">安装</a>
+          Get Started
+        </a>
+      </Button>
+      <Button>
+        <a class="setup" href="#">Demo</a>
+      </Button>
     </p>
   </section>
 
   <!-- TODO make dynamic based on data -->
   <section id="special-sponsor">
-    <span>前端工程规范与生态</span>
+    <span>Based on physics and mathematics</span>
     <a href="#">
       <picture>
-        <source type="image/avif" srcset="../../assets/images/jzzx.jpg" />
+        <source
+          type="image/avif"
+          srcset="https://avatars.githubusercontent.com/u/122161001"
+        />
         <img
           alt="Value Online logo"
           width="36"
           height="36"
-          src="../../assets/images/jzzx.jpg"
+          src="https://avatars.githubusercontent.com/u/122161001"
         />
       </picture>
     </a>
-    <span>前端底层构建与架构</span>
+    <span>Use in a variety of many ways</span>
   </section>
 
   <section id="highlights" class="vt-box-container">
-    <div class="vt-box">
+    <!-- <div class="vt-box">
       <h2>自动化 与 脚手架</h2>
       <p>
         构建自动化脚本 集成单元测试，提升开发效率， 可扩展 可定制 开发工具，
@@ -70,7 +66,7 @@
       <p>
         git 开发 提交 规范， 边缘生态， 插件开发， 定制功能， 工程化 代码规范
       </p>
-    </div>
+    </div> -->
   </section>
 
   <!-- <section id="sponsors">
@@ -82,8 +78,13 @@
 
   <!-- <NewsLetter /> -->
 </template>
-
+<script lang="ts">
+import Button from './button.vue'
+</script>
 <style scoped>
+.get-started {
+  display: flex;
+}
 section {
   padding: 42px 32px;
 }
@@ -104,7 +105,7 @@ section {
 
 html:not(.dark) .accent,
 .dark .tagline {
-  background: -webkit-linear-gradient(315deg, #e02e2e 25%, #7354ff);
+  background: -webkit-linear-gradient(315deg, #e76dbe 25%, #4423d4);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -118,8 +119,12 @@ html:not(.dark) .accent,
   font-size: 22px;
   margin: 24px auto 40px;
 }
-
-.actions a {
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+}
+/* .actions a {
   font-size: 16px;
   display: inline-block;
   background-color: var(--vt-c-bg-mute);
@@ -160,9 +165,9 @@ html:not(.dark) .accent,
 
 .dark .actions .get-started:hover {
   background-color: var(--vt-c-red-light);
-}
+} */
 
-.actions .setup {
+/* .actions .setup {
   border: 1px solid var(--vt-c-red-light);
   color: var(--vt-c-text-code);
 }
@@ -174,7 +179,7 @@ html:not(.dark) .accent,
 
 .dark .actions .setup:hover {
   background-color: var(--vt-c-gray-dark-3);
-}
+} */
 
 #special-sponsor {
   border-top: 1px solid var(--vt-c-divider-light);

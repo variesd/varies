@@ -5,6 +5,10 @@
       "outputs": ["dist/**", "build/**"],
       "outputMode": "new-only"
     },
+    "start": {
+      "dependsOn": ["build"]
+    },
+    "build:watch": {},
     "lint": {
       "outputs": []
     },

@@ -1,8 +1,12 @@
 <template>
-  <div></div>
+  <button class="button">
+    <div class="button-content">
+      <slot></slot>
+    </div>
+  </button>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   setup() {
     return {}
@@ -11,9 +15,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.RhyshaKachari-button-1 {
-  width: 220px;
+.button {
+  font-weight: bold;
   height: 50px;
+  line-height: 50px;
   border: none;
   outline: none;
   color: #fff;
@@ -22,9 +27,12 @@ export default {
   position: relative;
   z-index: 0;
   border-radius: 10px;
+  &-content {
+    padding: 0 26px;
+  }
 }
 
-.RhyshaKachari-button-1:before {
+.button:before {
   content: '';
   background: linear-gradient(
     45deg,
@@ -47,24 +55,19 @@ export default {
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   animation: RhyshaKachari-glowing 20s linear infinite;
-  opacity: 0;
+  opacity: 1;
   transition: opacity 0.3s ease-in-out;
   border-radius: 10px;
 }
 
-.RhyshaKachari-button-1:active {
+/* .button:active {
   color: #000;
 }
 
-.RhyshaKachari-button-1:active:after {
+.button:active:after {
   background: transparent;
-}
-
-.RhyshaKachari-button-1:hover:before {
-  opacity: 1;
-}
-
-.RhyshaKachari-button-1:after {
+} */
+.button:after {
   z-index: -1;
   content: '';
   position: absolute;

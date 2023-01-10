@@ -19,7 +19,7 @@
         class="get-started"
         href="/code-specification/build-specification/rollup/index.html"
       >
-        现在开始
+        Get Start
         <svg
           class="icon"
           xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@
           />
         </svg>
       </a>
-      <a class="setup" href="#">安装</a>
+      <a class="setup" href="#">Install</a>
     </p>
   </section>
 
@@ -104,7 +104,7 @@ section {
 
 html:not(.dark) .accent,
 .dark .tagline {
-  background: -webkit-linear-gradient(315deg, #e02e2e 25%, #7354ff);
+  background: -webkit-linear-gradient(315deg, #eb86f8 25%, #4423d4);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

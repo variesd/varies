@@ -17,7 +17,7 @@ function dismiss() {
   document.documentElement.classList.add('banner-dismissed')
   localStorage.setItem(`vue-docs-banner-${__VUE_BANNER_ID__}`, 'true')
 }
-const title = `🌱 面向未来 价值在线前端生态 The build will be completed soon 🌱`
+const title = `🌱 Animation Library The build will be completed soon 🌱`
 </script>
 
 <template>
@@ -43,8 +43,7 @@ html:not(.banner-dismissed) {
   text-align: center;
   font-size: 12px;
   font-weight: 600;
-  color: #fff;
-  background-color: var(--vt-c-red);
+  /* background-color: var(--vt-c-red); */
 }
 
 .banner-dismissed .banner {

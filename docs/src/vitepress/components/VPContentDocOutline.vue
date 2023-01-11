@@ -87,7 +87,7 @@ const handleClick = ({ target: el }: Event) => {
 .outline-marker {
   opacity: 0;
   position: absolute;
-  background-color: var(--vt-c-red);
+  background-color: var(--vt-c-gradient);
   border-radius: 4px;
   width: 4px;
   height: 20px;

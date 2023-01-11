@@ -55,6 +55,12 @@
   --vt-c-green-dark: #33a06f;
   --vt-c-green-darker: #155f3e;
 
+  --vt-c-gradient: #e76dbe;
+  --vt-c-gradient-light: linear-gradient(315deg, #e76dbe 25%, #4423d4);
+  --vt-c-gradient-lighter: linear-gradient(315deg, #e76dbe 25%, #4423d4);
+  --vt-c-gradient-dark: linear-gradient(315deg, #e76dbe 25%, #4423d4);
+  --vt-c-gradient-darker: linear-gradient(315deg, #e76dbe 25%, #4423d4);
+
   --vt-c-blue: #3b8eed;
   --vt-c-blue-light: #549ced;
   --vt-c-blue-lighter: #50a2ff;
@@ -106,9 +112,9 @@
   --vt-c-text-inverse-3: var(--vt-c-text-dark-3);
   --vt-c-text-inverse-4: var(--vt-c-text-dark-4);
 
-  --vt-c-brand: var(--vt-c-red);
-  --vt-c-brand-light: var(--vt-c-red-light);
-  --vt-c-brand-dark: var(--vt-c-red-dark);
+  --vt-c-brand: var(--vt-c-gradient);
+  --vt-c-brand-light: var(--vt-c-gradient-light);
+  --vt-c-brand-dark: var(--vt-c-gradient-dark);
   --vt-c-brand-highlight: var(--vt-c-brand-dark);
 }
 

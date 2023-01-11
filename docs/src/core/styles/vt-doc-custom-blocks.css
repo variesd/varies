@@ -56,11 +56,11 @@
 }
 
 .vt-doc .custom-block.danger {
-  border: 1px solid var(--vt-c-red);
+  border: 1px solid var(--vt-c-gradient);
 }
 .vt-doc .custom-block.danger .custom-block-title,
 .vt-doc .custom-block.danger:before {
-  color: var(--vt-c-red);
+  color: var(--vt-c-gradient);
 }
 
 .vt-doc .custom-block ul li:before {

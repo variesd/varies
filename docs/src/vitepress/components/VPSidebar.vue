@@ -72,7 +72,7 @@ watchPostEffect(async () => {
 }
 .VPSidebar::-webkit-scrollbar-thumb {
   /* display: none; */
-  background: var(--vt-c-red-dark);
+  background: var(--vt-c-gradient-dark);
   border-radius: 14px;
 }
 

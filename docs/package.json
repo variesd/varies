@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "version": "1.0.0",
-  "description": "Value Online - The Value Online Front end architecture.",
+  "description": "Use Animation Library Simple With Easy.",
   "main": "src/index.ts",
   "exports": {
     ".": "./src/index.ts",

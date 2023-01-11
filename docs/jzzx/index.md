@@ -1,6 +1,6 @@
 ---
 page: true
-title: Value Online - The Value Online Front end architecture
+title: Animation Library - Use Animation Library Simple With Easy
 ---
 
 <script setup>

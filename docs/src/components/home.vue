@@ -39,7 +39,7 @@
           srcset="https://avatars.githubusercontent.com/u/122161001"
         />
         <img
-          alt="Value Online logo"
+          alt="Variesd logo"
           width="36"
           height="36"
           src="https://avatars.githubusercontent.com/u/122161001"

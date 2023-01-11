@@ -1,125 +1,197 @@
-import * as easing from '@variesd/animated'
+import { mapTree, clone, isPlainObject } from './utils'
+import stepper from './stepper'
 
-export interface FromType {
-  value: number
-}
-export interface ToType {
-  value: number
-}
+const zero = () => 0
+const FRAME_RATE = 1 / 60
 
-export type EasingType =
-  | 'easeOutCubic'
-  | 'linear'
-  | 'easeOutExpo'
-  | 'easeInOutExpo'
-export type FormAndToAttributesType = 'value' | unknown
-export type StartFunc = () => void
-export type UpdateFunc = (key: ToType) => void
-export type FinishFunc = () => void
+export default {
+  props: {
+    endValue: {
+      type: [Function, Object, Array],
+      required: true
+    }
+  },
+  data() {
+    let endValue = this.endValue
+    if (typeof endValue === 'function') {
+      endValue = endValue()
+    } else {
+      endValue = clone(endValue)
+    }
 
-export interface AnimationOptions {
-  from: FromType
-  to: ToType
-  duration?: number
-  delay?: number
-  easing?: EasingType
-  onStart: StartFunc
-  onUpdate: UpdateFunc
-  onFinish: FinishFunc
-}
-
-export const DATE_NOW = Date.now()
-
-export class Tween {
-  private startTime: number | null = null
-
-  private started?: boolean = false
-
-  private finished?: boolean = false
-
-  private frameRequest?: number
-
-  private time?: number
-
-  private elapsed?: number
-
-  private keys: ToType = { value: 0 }
-
-  constructor(public options: AnimationOptions) {
-    const { from, to, delay } = options
-    ;[from, to].forEach((item) => {
-      if (item === undefined) {
-        console.warn('[@varies/vue]: counter components need from and to props')
+    return {
+      currVals: endValue,
+      currV: mapTree(zero, endValue),
+      now: null
+    }
+  },
+  watch: {
+    endValue: {
+      deep: true,
+      handler() {
+        this.raf(true, false)
       }
-    })
-    this.initStartTime(delay)
-  }
-
-  private initStartTime(delay = 0) {
-    this.startTime = DATE_NOW + delay
-  }
-
-  update(): void {
-    this.time = Date.now()
-    // delay some time
-    if (this.startTime && this.time < this.startTime) {
-      return
     }
-    if (this.finished) {
-      return
-    }
-    // finish animation
-    if (this.elapsed === this.options.duration) {
-      if (!this.finished) {
-        this.finished = true
-        if (this.options.onFinish) {
-          this.options.onFinish()
+  },
+  mounted() {
+    this._rafId = null
+    this.raf(true, false)
+  },
+  destroyed() {
+    cancelAnimationFrame(this._rafId)
+  },
+  methods: {
+    raf(justStated, isLastRaf) {
+      if (justStated && this._rafId !== null) {
+        return
+      }
+
+      this._rafId = requestAnimationFrame(() => {
+        const { currVals, currV, now } = this
+        let endValue = this.endValue
+
+        if (typeof endValue === 'function') {
+          endValue = endValue(currVals)
         }
-      }
-      return
-    }
-    // elapsed 时间 和  duration 时间比较 逝去光阴
-    this.elapsed = this.time - (this.startTime ?? 0)
 
-    // 防止 时间 一直 流逝 ~
-    this.elapsed =
-      this.elapsed > (this.options.duration ?? 0)
-        ? this.options.duration
-        : this.elapsed
-    // 从0 到 1 elapsed time
-    // eslint-disable-next-line guard-for-in
-    for (const key in this.options.to) {
-      this.keys[key] =
-        this.options.from[key] +
-        (this.options.to[key] - this.options.from[key]) *
-          easing[this.options.easing!](this.elapsed! / this.options.duration!)
+        const frameRate =
+          now && !justStated ? (Date.now() - now) / 1000 : FRAME_RATE
+        const newCurrVals = updateCurrVals(frameRate, currVals, currV, endValue)
+        const newCurrV = updateCurrV(frameRate, currVals, currV, endValue)
+
+        this.currVals = newCurrVals
+        this.currV = newCurrV
+        this.now = Date.now()
+
+        const stop = noSpeed(newCurrV)
+        if (stop && !justStated) {
+          if (isLastRaf) {
+            this._rafId = null
+          } else {
+            this.raf(false, true)
+          }
+        } else {
+          this.raf(false, false)
+        }
+      })
     }
-    if (!this.started) {
-      if (this.options.onStart) {
-        this.options.onStart()
-      }
-      this.started = true
+  },
+  render() {
+    console.log(this.currVals)
+
+    return this.currVals
+  }
+}
+
+function updateCurrVals(frameRate, currVals, currV, endValue, k, b) {
+  if (endValue === null) {
+    return null
+  }
+  if (typeof endValue === 'number') {
+    if (k == null || b == null) {
+      return endValue
     }
-    if (this.options.onUpdate) {
-      this.options.onUpdate(this.keys)
+    // TODO: do something to stepper to make this not allocate (2 steppers?)
+    return stepper(frameRate, currVals, currV, endValue, k, b)[0]
+  }
+  if (endValue.val != null && endValue.config && endValue.config.length === 0) {
+    return endValue
+  }
+  if (endValue.val != null) {
+    const [_k, _b] = endValue.config || [170, 26]
+    let ret = {
+      val: updateCurrVals(
+        frameRate,
+        currVals.val,
+        currV.val,
+        endValue.val,
+        _k,
+        _b
+      )
     }
+    if (endValue.config) {
+      ret.config = endValue.config
+    }
+    return ret
+  }
+  if (Array.isArray(endValue)) {
+    return endValue.map((_, i) =>
+      updateCurrVals(frameRate, currVals[i], currV[i], endValue[i], k, b)
+    )
+  }
+  if (isPlainObject(endValue)) {
+    const ret = {}
+    Object.keys(endValue).forEach((key) => {
+      ret[key] = updateCurrVals(
+        frameRate,
+        currVals[key],
+        currV[key],
+        endValue[key],
+        k,
+        b
+      )
+    })
+    return ret
+  }
+  return endValue
+}
+
+function updateCurrV(frameRate, currVals, currV, endValue, k, b) {
+  if (endValue === null) {
+    return null
+  }
+  if (typeof endValue === 'number') {
+    if (k == null || b == null) {
+      return mapTree(zero, currV)
+    }
+    // TODO: do something to stepper to make this not allocate (2 steppers?)
+    return stepper(frameRate, currVals, currV, endValue, k, b)[1]
+  }
+  if (endValue.val != null && endValue.config && endValue.config.length === 0) {
+    return mapTree(zero, currV)
+  }
+  if (endValue.val != null) {
+    const [_k, _b] = endValue.config || [170, 26]
+    let ret = {
+      val: updateCurrV(frameRate, currVals.val, currV.val, endValue.val, _k, _b)
+    }
+    if (endValue.config) {
+      ret.config = endValue.config
+    }
+    return ret
+  }
+  if (Array.isArray(endValue)) {
+    return endValue.map((_, i) =>
+      updateCurrV(frameRate, currVals[i], currV[i], endValue[i], k, b)
+    )
+  }
+  if (isPlainObject(endValue)) {
+    const ret = {}
+    Object.keys(endValue).forEach((key) => {
+      ret[key] = updateCurrV(
+        frameRate,
+        currVals[key],
+        currV[key],
+        endValue[key],
+        k,
+        b
+      )
+    })
+    return ret
+  }
+  return mapTree(zero, currV)
+}
+
+function noSpeed(coll) {
+  if (Array.isArray(coll)) {
+    return coll.every(noSpeed)
   }
 
-  // 递归 重绘
-  start(): void {
-    this.startTime = Date.now() + (this.options.delay ?? 0)
-    const tick = () => {
-      this.update()
-      this.frameRequest = requestAnimationFrame(tick)
-      if (this.finished) {
-        // 在判断 update中 结束后 停止 重绘
-        cancelAnimationFrame(this.frameRequest)
-      }
-    }
-    tick()
+  if (isPlainObject(coll)) {
+    return Object.keys(coll).every((key) =>
+      key === 'config' ? true : noSpeed(coll[key])
+    )
   }
 
-  stop(): void {
-    cancelAnimationFrame(this.frameRequest)
-  }
+  return typeof coll === 'number' ? coll === 0 : true
 }

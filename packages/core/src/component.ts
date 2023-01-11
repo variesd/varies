@@ -38,6 +38,6 @@
 //   }
 //   return stop
 // }
-import Spring from './spring'
+import Spring from './spring-test1'
 
-export default Spring
+export { Spring }

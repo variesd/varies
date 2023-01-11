@@ -51,11 +51,11 @@ module.exports = (async () => {
           text: 'MIT License',
           link: 'https://opensource.org/licenses/MIT'
         },
-        copyright: `Copyright © 2022-${new Date().getFullYear()} Value Online - ERKELOST-ADNY`
+        copyright: `Copyright © 2022-${new Date().getFullYear()} @variesd - ERKELOST-ADNY`
       },
 
       socialLinks: [
-        { icon: 'github', link: 'https://github.com/erkelost' }
+        { icon: 'github', link: 'https://github.com/variesd/vue-spring' }
         // { icon: 'twitter', link: 'https://twitter.com/vuejs' },
         // { icon: 'discord', link: 'https://discord.com/invite/HBherRA' }
       ],

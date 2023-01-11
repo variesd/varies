@@ -11,7 +11,7 @@
       />
     </svg>
     <span class="text">Vue.js</span> -->
-    <img src="../../../assets/images/jzzx.jpg" alt="" />
+    <img src="https://avatars.githubusercontent.com/u/122161001" alt="" />
   </a>
 </template>
 

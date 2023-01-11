@@ -45,8 +45,20 @@ html:not(.banner-dismissed) {
   font-weight: 600;
   /* background-color: var(--vt-c-red); */
   /* background-color: #e76dbe; */
+  background: -webkit-linear-gradient(315deg, #e76dbe 25%, #4423d4);
+  /* background-clip: text; */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+  animation: hue 4.5s linear infinite;
 }
-
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}
 .banner-dismissed .banner {
   display: none;
 }

@@ -34,7 +34,7 @@
     <span>Based on physics and mathematics</span>
     <a href="#">
       <picture>
-        <source
+        <!-- <source
           type="image/avif"
           srcset="https://avatars.githubusercontent.com/u/122161001"
         />
@@ -43,7 +43,7 @@
           width="36"
           height="36"
           src="https://avatars.githubusercontent.com/u/122161001"
-        />
+        /> -->
       </picture>
     </a>
     <span>Use in a variety of many ways</span>

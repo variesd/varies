@@ -44,7 +44,7 @@ html:not(.banner-dismissed) {
   font-size: 12px;
   font-weight: 600;
   /* background-color: var(--vt-c-red); */
-  background-color: #e76dbe;
+  /* background-color: #e76dbe; */
 }
 
 .banner-dismissed .banner {

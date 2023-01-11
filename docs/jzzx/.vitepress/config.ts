@@ -24,10 +24,10 @@ module.exports = (async () => {
     },
 
     lang: 'zh-CN',
-    title: 'Value Online',
+    title: 'Varies',
     lastUpdated: '最近更新',
-    repo: 'https://github.com/ErKeLost/jzzx-docs',
-    description: 'Value Online - The Value Online Front end architecture',
+    repo: 'https://github.com/variesd/vue-spring',
+    description: 'Animation Library - Use Animation Library Simple With Easy',
     head,
     themeConfig: {
       // logo: '/img/logo-vue.svg',

@@ -60,7 +60,7 @@ const [, name2] = names
 // 如果我们只想要结构其中的一个元素 剩下的元素放入到一个新数组中
 const [name1, ...newNames] = names
 // 解构 参数 冗余 设置默认值
-const [name1, name2, name3 = 'value online'] = names
+const [name1, name2, name3 = 'varies'] = names
 ```
 
 ## 对象的解构

@@ -1,16 +1,10 @@
 export const nav = [
   {
-    text: '文档',
+    text: 'Quick Start',
     activeMatch: `^/(guide|examples)/`,
     items: [
       {
         items: [
-          // { text: "快速开始", link: "" },
-          // { text: "安装", link: "" },
-          // { text: "更新日志", link: "/log/docs/index" },
-          // { text: "Vue3源码全解析", link: "/vue/source-code/index" },
-          // { text: "VueUse源码全解析", link: "/vueuse/source-code/index" },
-          // { text: "JavaScript算法解析", link: "/algorithm/index" },
           { text: 'Typescript', link: '/typescript/learn/basics' },
           { text: 'JavaScript', link: '/javascript/this/index' },
           { text: 'Algorithm', link: '/algorithm/index' }
@@ -45,7 +39,7 @@ export const nav = [
     ]
   },
   {
-    text: 'Vue规范',
+    text: '@varies',
     activeMatch: `^/vue/`,
     items: [
       {
@@ -74,7 +68,7 @@ export const nav = [
     ]
   },
   {
-    text: 'React规范',
+    text: 'Vue',
     activeMatch: `^/react/`,
     items: [
       {
@@ -91,67 +85,7 @@ export const nav = [
     ]
   },
   {
-    text: '插件库',
+    text: 'Example',
     link: '/plugin-library'
-  },
-  {
-    text: '工具库',
-    items: [
-      {
-        text: '工具库',
-        items: [
-          {
-            text: 'vue指令库',
-            link: '/tool-library/directive-library/index'
-          },
-          {
-            text: 'shared函数共享库',
-            link: '/tool-library/shared-library/index'
-          }
-        ]
-      },
-      {
-        text: '状态管理库',
-        items: [
-          { text: 'jzzx-store', link: '/tool-library/state-library/index' },
-          {
-            text: 'vuex工具Devtools',
-            link: 'https://github.com/vuejs/vue-devtools'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    text: 'Pro 组件',
-    activeMatch: `^/community/`,
-    items: [
-      {
-        text: 'vue-components-pro',
-        items: [
-          {
-            text: 'layout-pro',
-            link: '/vue-components/layout-pro/index'
-          },
-          {
-            text: 'colorPicker-pro',
-            link: '/vue-components/layout-pro/index'
-          },
-          {
-            text: 'statistic-pro',
-            link: '/vue-components/layout-pro/index'
-          }
-          // {
-          //   text: 'Contribution Guide',
-          //   link: '/community/contribution-guide'
-          // },
-          // { text: 'Events', link: 'https://events.vuejs.org/' }
-        ]
-      }
-    ]
   }
-  // {
-  //   text: "项目架构规范",
-  //   link: "/code-specification/code-td-project/code-specification/deps",
-  // },
 ]

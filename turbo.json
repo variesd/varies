@@ -8,7 +8,9 @@
     "start": {
       "dependsOn": ["build"]
     },
-    "build:variesd": {},
+    "build:variesd": {
+      "cache": false
+    },
     "build:watch": {},
     "lint": {
       "outputs": []

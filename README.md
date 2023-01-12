@@ -8,4 +8,4 @@
 
 # WIP
 
-## 🍰 A spring physics-based Vue animation library
+## 🍰 A spring physics based animation library

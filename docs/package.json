@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/erkelost/jzzx.git"
+    "url": "git+https://github.com/variesd"
   },
   "keywords": [
     "cli",
@@ -25,13 +25,13 @@
   "license": "MIT",
   "homepage": "https://github.com/erkelost",
   "bugs": {
-    "url": "https://github.com/erkelost/jzzx/issues"
+    "url": "https://github.com/variesd"
   },
   "scripts": {
     "test": "yarn lint && yarn type",
-    "dev": "vitepress dev jzzx --port 6173",
-    "build:variesd": "vitepress build jzzx",
-    "serve": "yarn jzzx-build && vitepress serve jzzx",
+    "dev": "vitepress dev varies --port 6173",
+    "build:variesd": "vitepress build varies",
+    "serve": "yarn varies-build && vitepress serve varies",
     "lint": "prettier --check --write --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
     "lint:fail": "prettier --check --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
     "type": "tsc --noEmit"

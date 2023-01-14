@@ -1,6 +1,6 @@
 {
   "name": "@variesd/vue",
-  "version": "0.0.15",
+  "version": "0.0.21",
   "description": "",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -68,7 +68,6 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "css-render": "^0.15.12",
-    "sass": "^1.49.9",
     "vite": "^4.0.3",
     "vue": "latest",
     "vite-plugin-dts": "^1.0.5"

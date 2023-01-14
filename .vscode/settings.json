@@ -12,5 +12,8 @@
     "tsup",
     "variesd",
     "vitepress"
+  ],
+  "githubPullRequests.ignoredPullRequestBranches": [
+    "main"
   ]
 }

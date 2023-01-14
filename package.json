@@ -16,7 +16,7 @@
     "prepare": "husky install",
     "preinstall": "npx only-allow pnpm",
     "prepublishOnly": "npm run build",
-    "release": "bumpp packages/*/package.json && npm publish",
+    "release": "bumpp packages/*/package.json && pnpm publish -r",
     "test": "vitest"
   },
   "devDependencies": {

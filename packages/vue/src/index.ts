@@ -1,5 +1,5 @@
 import type { App } from 'vue-demi'
-import Statistic from './statistic/statistic.vue'
+import Statistic from './components/statistic/statistic.vue'
 
 Statistic.install = (app: App): void => {
   app.component(Statistic.name, Statistic)

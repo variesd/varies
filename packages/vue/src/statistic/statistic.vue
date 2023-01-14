@@ -1,56 +1,33 @@
 <template>
-  <div class="statistic">
-    <div class="statistic-title" style="{titleStyle}">
-      <slot name="title">{{ title }}</slot>
-    </div>
-    <div class="statistic-content" style="{valueStyle}">
-      <span v-if="prefix" class="statistic-prefix">
-        <slot name="prefix">{{ prefix }}</slot>
-      </span>
-      <span class="statistic--value">{{ statisticValue }}</span>
-      <span v-if="suffix" class="statistic-suffix">
-        <slot name="suffix">{{ suffix }}</slot>
-      </span>
-    </div>
-    <div v-if="extra" class="statistic-extra">
-      <slot name="extra">{{ extra }}</slot>
-    </div>
-  </div>
+  <span>{{ statisticValue }}</span>
 </template>
 
 <script setup lang="ts">
 import { computed, ref, onMounted, watch } from 'vue-demi'
-import { statisticProps, StatisticProps } from './statistic-types'
 import { analysisValueType } from './utils/separator'
 import { Tween } from '@variesd/core'
 const props = withDefaults(
   defineProps<{
-    valueFrom?: any
+    initialValue?: any
     animationDuration?: any
     groupSeparator?: any
     precision?: any
     value?: any
     start?: boolean
     animation?: boolean
-    title?: any
-    prefix?: any
-    suffix?: any
-    extra?: any
     delay?: number
-    valueStyle?: any
-    titleValue?: any
   }>(),
   {
-    animation: false,
-    start: false,
+    animation: true,
+    start: true,
     delay: 0
   }
 )
-const innerValue = ref(props.valueFrom ?? props.value)
+const innerValue = ref(props.initialValue ?? props.value)
 const tween = ref(null)
 
 const animation = (
-  from: number = props.valueFrom ?? 0,
+  from: number = props.initialValue ?? 0,
   to: number = typeof props.value === 'number'
     ? props.value
     : Number(props.value)

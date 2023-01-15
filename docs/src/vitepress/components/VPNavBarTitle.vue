@@ -11,10 +11,16 @@
       />
     </svg>
     <span class="text">Vue.js</span> -->
-    <!-- <img src="https://avatars.githubusercontent.com/u/122161001" alt="" /> -->
+    <!-- <img style="width: 200px" src="../../../image/logo1.png" alt="" /> -->
+    <img style="width: 200px" src="../../../image/logo66.png" alt="" />
   </a>
 </template>
+<script setup>
+import { useDark, useToggle } from '@vueuse/core'
 
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
+</script>
 <style scoped>
 .VPNavBarTitle {
   display: flex;

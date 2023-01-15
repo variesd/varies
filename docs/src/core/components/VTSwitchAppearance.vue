@@ -2,7 +2,10 @@
 import VTSwitch from './VTSwitch.vue'
 import VTIconSun from './icons/VTIconSun.vue'
 import VTIconMoon from './icons/VTIconMoon.vue'
+import { useDark, useToggle } from '@vueuse/core'
 
+const isDark = useDark()
+const toggleDark = useToggle(isDark)
 const storageKey = 'vue-theme-appearance'
 const toggle = typeof localStorage !== 'undefined' ? useAppearance() : () => {}
 

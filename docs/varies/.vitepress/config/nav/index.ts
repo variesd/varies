@@ -1,7 +1,7 @@
 export const nav = [
   {
     text: 'Quick Start',
-    link: '/plugin-library'
+    link: '/start/index.md'
   },
   {
     text: 'Playground',

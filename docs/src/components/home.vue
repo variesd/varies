@@ -16,12 +16,7 @@
     </p>
     <p class="actions">
       <Button>
-        <a
-          class="get-started"
-          href="/code-specification/build-specification/rollup/index.html"
-        >
-          Get Started
-        </a>
+        <a class="get-started"> Get Started </a>
       </Button>
       <Button>
         <a class="setup" href="#">Demo</a>

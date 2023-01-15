@@ -3,6 +3,8 @@ const path = require('path')
 import { head } from './config/head'
 import { nav } from './config/nav'
 import { sidebar } from './config/sidebar'
+import renderPermaLink from './render-perma-link'
+import MarkDownItCustomAnchor from './markdown-it-custom-anchor'
 
 module.exports = (async () => {
   const base = await getBase()
@@ -63,8 +65,15 @@ module.exports = (async () => {
       sidebar
     },
     markdown: {
+      attrs: {
+        leftDelimiter: '%{',
+        rightDelimiter: '}%'
+      },
+      anchor: {
+        permalink: renderPermaLink
+      },
       config: (md) => {
-        // md.use();
+        // md.use(MarkDownItCustomAnchor)
       }
     }
   }

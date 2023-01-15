@@ -12,6 +12,8 @@ P0 ～ PN 这些定义的点，第一个点和最后一个点是曲线的开头�
 
 lerp 函数 https://zhuanlan.zhihu.com/p/114898567
 
+https://juejin.cn/post/6844903774117429261#comment
+
 ![911fcc8f17a81bd9ae5d9874ee680c5.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0955c60a081f4d82a30944cb2ccff016~tplv-k3u1fbpfcp-watermark.image?)
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ec12bf2b8524180895e4c2d065fd6f3~tplv-k3u1fbpfcp-watermark.image?)

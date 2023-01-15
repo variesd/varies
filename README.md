@@ -1,8 +1,4 @@
-<div align="center">
-  <a href="">
-    <img src="./varies.png">
-  </a>
-</div>
+![image.png](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/eeb0f434b2674b4098c8383064f1ab0e~tplv-k3u1fbpfcp-watermark.image?)
 
 ---
 

@@ -2,6 +2,8 @@ import { h } from 'vue'
 import { VPTheme } from '@vue/theme'
 import Banner from '../../../src/components/Banner.vue'
 // uncomment to test CSS variables override
+import './custom.css'
+import './code-theme.css'
 import './override.css'
 export default {
   ...VPTheme,

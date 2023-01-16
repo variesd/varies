@@ -10,7 +10,7 @@ A Bézier curve (/ˈbɛz.i.eɪ/ BEH-zee-ay)[1] is a parametric curve used in com
 这一堆点是在定义的 P0 ～ PN 的控制之下得出的。
 P0 ～ PN 这些定义的点，第一个点和最后一个点是曲线的开头和结尾。
 
-lerp 函数 https://zhuanlan.zhihu.com/p/114898567
+学习 lerps 函数 https://zhuanlan.zhihu.com/p/114898567
 
 https://juejin.cn/post/6844903774117429261#comment
 

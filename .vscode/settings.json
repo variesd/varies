@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "ˈbɛz",
     "Bézier",
     "bumpp",
     "commitlint",
@@ -9,6 +10,7 @@
     "esno",
     "Holmér",
     "iife",
+    "lerp",
     "lerps",
     "postplop",
     "preinstall",
@@ -16,7 +18,5 @@
     "variesd",
     "vitepress"
   ],
-  "githubPullRequests.ignoredPullRequestBranches": [
-    "main"
-  ]
+  "githubPullRequests.ignoredPullRequestBranches": ["main"]
 }

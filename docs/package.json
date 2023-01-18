@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@vueuse/core": "^9.5.0",
-    "vitepress": "1.0.0-alpha.33"
+    "vitepress": "latest"
   },
   "devDependencies": {
     "sass": "^1.57.1"

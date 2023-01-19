@@ -25,18 +25,24 @@ export interface CoreTeam {
 
 const contributorsAvatars: Record<string, string> = {}
 
-const getAvatarUrl = (name: string) => import.meta.hot ? `https://github.com/${name}.png` : `/user-avatars/${name}.png`
+const getAvatarUrl = (name: string) =>
+  import.meta.hot
+    ? `https://github.com/${name}.png`
+    : `/user-avatars/${name}.png`
 
-export const contributors = (contributorNames as string[]).reduce((acc, name) => {
-  contributorsAvatars[name] = getAvatarUrl(name)
-  acc.push({ name, avatar: contributorsAvatars[name] })
-  return acc
-}, [] as Contributor[])
+export const contributors = (contributorNames as string[]).reduce(
+  (acc, name) => {
+    contributorsAvatars[name] = getAvatarUrl(name)
+    acc.push({ name, avatar: contributorsAvatars[name] })
+    return acc
+  },
+  [] as Contributor[]
+)
 
 const createLinks = (tm: CoreTeam): CoreTeam => {
   tm.links = [
     { icon: 'github', link: `https://github.com/${tm.github}` },
-    { icon: 'twitter', link: `https://twitter.com/${tm.twitter}` },
+    { icon: 'twitter', link: `https://twitter.com/${tm.twitter}` }
   ]
   return tm
 }
@@ -50,7 +56,7 @@ const plainTeamMembers: CoreTeam[] = [
     sponsor: 'https://github.com/sponsors/antfu',
     title: 'A fanatical open sourceror, working',
     org: 'NuxtLabs',
-    desc: 'Core team member of Vite & Vue',
+    desc: 'Core team member of Vite & Vue'
   },
   {
     avatar: contributorsAvatars['sheremet-va'],
@@ -59,7 +65,7 @@ const plainTeamMembers: CoreTeam[] = [
     twitter: 'sheremet_va',
     sponsor: 'https://github.com/sponsors/sheremet-va',
     title: 'An open source fullstack developer',
-    desc: 'Core team member of Vitest',
+    desc: 'Core team member of Vitest'
   },
   {
     avatar: contributorsAvatars['patak-dev'],
@@ -69,7 +75,7 @@ const plainTeamMembers: CoreTeam[] = [
     sponsor: 'https://github.com/sponsors/patak-dev',
     title: 'A collaborative being, working',
     org: 'StackBlitz',
-    desc: 'Core team member of Vite & Vue',
+    desc: 'Core team member of Vite & Vue'
   },
   {
     avatar: contributorsAvatars.Aslemammad,
@@ -77,7 +83,7 @@ const plainTeamMembers: CoreTeam[] = [
     github: 'Aslemammad',
     twitter: 'asleMammadam',
     title: 'An open source developer',
-    desc: 'Team member of Poimandres & Vike',
+    desc: 'Team member of Poimandres & Vike'
   },
   {
     avatar: contributorsAvatars.Demivan,
@@ -85,7 +91,7 @@ const plainTeamMembers: CoreTeam[] = [
     github: 'Demivan',
     twitter: 'IvanDemchuk',
     title: 'A tech lead, fullstack developer',
-    desc: 'Author of fluent-vue',
+    desc: 'Author of fluent-vue'
   },
   {
     avatar: contributorsAvatars.userquin,
@@ -93,7 +99,7 @@ const plainTeamMembers: CoreTeam[] = [
     github: 'userquin',
     twitter: 'userquin',
     title: 'A fullstack and android developer',
-    desc: 'Vite\'s fanatical follower',
+    desc: "Vite's fanatical follower"
   },
   {
     avatar: contributorsAvatars.zxch3n,
@@ -101,10 +107,10 @@ const plainTeamMembers: CoreTeam[] = [
     github: 'zxch3n',
     twitter: 'zxch3n',
     title: 'A fullstack developer',
-    desc: 'Creating tools for collaboration',
-  },
+    desc: 'Creating tools for collaboration'
+  }
 ]
 
-const teamMembers = plainTeamMembers.map(tm => createLinks(tm))
+const teamMembers = plainTeamMembers.map((tm) => createLinks(tm))
 
 export { teamMembers }

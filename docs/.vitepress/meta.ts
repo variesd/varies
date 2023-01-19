@@ -3,7 +3,8 @@
 /* Texts */
 export const vitestName = 'Vitest'
 export const vitestShortName = 'Vitest'
-export const vitestDescription = 'A blazing fast unit test framework powered by Vite'
+export const vitestDescription =
+  'A blazing fast unit test framework powered by Vite'
 
 /* CDN fonts and styles */
 export const googleapis = 'https://fonts.googleapis.com'
@@ -17,7 +18,8 @@ export const ogImage = `${ogUrl}og.png`
 /* GitHub and social links */
 export const github = 'https://github.com/vitest-dev/vitest'
 export const releases = 'https://github.com/vitest-dev/vitest/releases'
-export const contributing = 'https://github.com/vitest-dev/vitest/blob/main/CONTRIBUTING.md'
+export const contributing =
+  'https://github.com/vitest-dev/vitest/blob/main/CONTRIBUTING.md'
 export const discord = 'https://chat.vitest.dev'
 export const twitter = 'https://twitter.com/vitest_dev'
 
@@ -29,4 +31,7 @@ export const preconnectHomeLinks = [googleapis, gstatic]
 export const pwaFontsRegex = new RegExp(`^${googleapis}/.*`, 'i')
 export const pwaFontStylesRegex = new RegExp(`^${gstatic}/.*`, 'i')
 // eslint-disable-next-line prefer-regex-literals
-export const githubusercontentRegex = new RegExp('^https://((i.ibb.co)|((raw|user-images).githubusercontent.com))/.*', 'i')
+export const githubusercontentRegex = new RegExp(
+  '^https://((i.ibb.co)|((raw|user-images).githubusercontent.com))/.*',
+  'i'
+)

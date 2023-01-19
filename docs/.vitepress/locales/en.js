@@ -2,7 +2,7 @@ export default {
   vitepressConfig: {
     title: '',
     lang: 'en-US',
-    description: 'The Vue Store that you will enjoy using',
+    description: 'The Vue Store that you will enjoy using'
   },
   themeConfig: {
     label: 'English',
@@ -20,22 +20,22 @@ export default {
         items: [
           {
             text: 'Discussions',
-            link: 'https://github.com/vuejs/pinia/discussions',
+            link: 'https://github.com/vuejs/pinia/discussions'
           },
           {
             text: 'Chat',
-            link: 'https://chat.vuejs.org',
+            link: 'https://chat.vuejs.org'
           },
           {
             text: 'Twitter',
-            link: 'https://twitter.com/posva',
+            link: 'https://twitter.com/posva'
           },
           {
             text: 'Changelog',
-            link: 'https://github.com/vuejs/pinia/blob/v2/packages/pinia/CHANGELOG.md',
-          },
-        ],
-      },
+            link: 'https://github.com/vuejs/pinia/blob/v2/packages/pinia/CHANGELOG.md'
+          }
+        ]
+      }
     ],
 
     sidebar: {
@@ -47,10 +47,10 @@ export default {
             { text: '@pinia/nuxt', link: '/api/modules/pinia_nuxt.html' },
             {
               text: '@pinia/testing',
-              link: '/api/modules/pinia_testing.html',
-            },
-          ],
-        },
+              link: '/api/modules/pinia_testing.html'
+            }
+          ]
+        }
       ],
       // catch-all fallback
       '/': [
@@ -59,13 +59,13 @@ export default {
           children: [
             {
               text: 'What is Pinia?',
-              link: '/introduction.html',
+              link: '/introduction.html'
             },
             {
               text: 'Getting Started',
-              link: '/getting-started.html',
-            },
-          ],
+              link: '/getting-started.html'
+            }
+          ]
         },
         {
           text: 'Core Concepts',
@@ -77,22 +77,22 @@ export default {
             { text: 'Plugins', link: '/core-concepts/plugins.html' },
             {
               text: 'Stores outside of components',
-              link: '/core-concepts/outside-component-usage.html',
-            },
-          ],
+              link: '/core-concepts/outside-component-usage.html'
+            }
+          ]
         },
         {
           text: 'Server-Side Rendering (SSR)',
           children: [
             {
               text: 'Vue and Vite',
-              link: '/ssr/',
+              link: '/ssr/'
             },
             {
               text: 'Nuxt.js',
-              link: '/ssr/nuxt.html',
-            },
-          ],
+              link: '/ssr/nuxt.html'
+            }
+          ]
         },
         {
           text: 'Cookbook',
@@ -100,35 +100,35 @@ export default {
           children: [
             {
               text: 'Migration from Vuex ≤4',
-              link: '/cookbook/migration-vuex.html',
+              link: '/cookbook/migration-vuex.html'
             },
             {
               text: 'Hot Module Replacement',
-              link: '/cookbook/hot-module-replacement.html',
+              link: '/cookbook/hot-module-replacement.html'
             },
             {
               text: 'Testing',
-              link: '/cookbook/testing.html',
+              link: '/cookbook/testing.html'
             },
             {
               text: 'Usage without setup()',
-              link: '/cookbook/options-api.html',
+              link: '/cookbook/options-api.html'
             },
             {
               text: 'Composing Stores',
-              link: '/cookbook/composing-stores.html',
+              link: '/cookbook/composing-stores.html'
             },
             {
               text: 'Migration from v0/v1 to v2',
-              link: '/cookbook/migration-v1-v2.html',
+              link: '/cookbook/migration-v1-v2.html'
             },
             {
               text: 'Dealing with composables',
-              link: '/cookbook/composables.html',
-            },
-          ],
-        },
-      ],
-    },
-  },
+              link: '/cookbook/composables.html'
+            }
+          ]
+        }
+      ]
+    }
+  }
 }

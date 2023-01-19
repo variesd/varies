@@ -40,18 +40,18 @@ const isDark = useDark(darkStorageConfig)
 const props = defineProps({
   name: {
     type: String as PropType<'gold' | 'platinum' | 'silver' | 'bronze'>,
-    required: true,
+    required: true
   },
   size: {
     type: [Number, String],
-    default: 140,
-  },
+    default: 140
+  }
 })
 
 const list = computed(() =>
   sponsors[props.name.toLowerCase()].map((sponsor) => ({
     ...sponsor,
-    imgSrc: isDark.value ? sponsor.imgSrcDark : sponsor.imgSrcLight,
+    imgSrc: isDark.value ? sponsor.imgSrcDark : sponsor.imgSrcLight
   }))
 )
 </script>

@@ -1,6 +1,6 @@
 const position = {
   false: 'push',
-  true: 'unshift',
+  true: 'unshift'
 }
 
 const renderPermalink = (slug, opts, state, permalink) => {
@@ -21,13 +21,13 @@ const renderPermalink = (slug, opts, state, permalink) => {
         attrs: [
           ...(opts.permalinkClass ? [['class', opts.permalinkClass]] : []),
           ['href', opts.permalinkHref(slug, state)],
-          ...Object.entries(opts.permalinkAttrs(slug, state)),
-        ],
+          ...Object.entries(opts.permalinkAttrs(slug, state))
+        ]
       }),
       Object.assign(new state.Token('html_block', '', 0), {
-        content: opts.permalinkSymbol,
+        content: opts.permalinkSymbol
       }),
-      new state.Token('link_close', 'a', -1),
+      new state.Token('link_close', 'a', -1)
     ]
     if (opts.permalinkSpace) {
       linkTokens[position[!opts.permalinkBefore]](space())

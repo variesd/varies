@@ -14,6 +14,6 @@ export default function TypeDocPlugin(
     apply: 'serve',
     buildStart() {
       return serve()
-    },
+    }
   }
 }

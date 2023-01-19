@@ -4,10 +4,10 @@ import zh from './zh.js'
 export default {
   vitepressConfig: {
     '/': en.vitepressConfig,
-    '/zh/': zh.vitepressConfig,
+    '/zh/': zh.vitepressConfig
   },
   themeConfig: {
     '/': en.themeConfig,
-    '/zh/': zh.themeConfig,
-  },
+    '/zh/': zh.themeConfig
+  }
 }

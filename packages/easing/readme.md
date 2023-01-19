@@ -1,10 +1,9 @@
 # The Beauty of Bézier Curves
 
-
-
 ![911fcc8f17a81bd9ae5d9874ee680c5.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0955c60a081f4d82a30944cb2ccff016~tplv-k3u1fbpfcp-watermark.image?)
 
 ## The Ever so Lovely Bézier Curve
+
 ### What is a Bezier curve?
 
 A Bézier curve (/ˈbɛz.i.eɪ/ BEH-zee-ay) is a parametric curve used in computer graphics and related fields.
@@ -23,9 +22,9 @@ Bézier curves can be combined to form a Bézier spline, or generalized to highe
 - 这一堆点是在定义的 P0 ～ PN 的控制之下得出的。
 - P0 ～ PN 这些定义的点，第一个点和最后一个点是曲线的开头和结尾。
 
+### 线性 Bézier curves
 
-### 线性Bézier curves
-线性Bézier curves是由两个点P0和P1控制形成的，
+线性 Bézier curves 是由两个点 P0 和 P1 控制形成的，
 
 假设我们有两个点 P0 and P1 分段连接，想象第三个点在这两点之间 P 第三个点 P 定义一个 t 值 这个 t 的 value 就是
 介于 0 - 1 之间的值 作为百分比
@@ -36,22 +35,21 @@ Bézier curves can be combined to form a Bézier spline, or generalized to highe
 这个函数 也叫做线性插值 `lerp`
 
 在数学中 你可以把它定义为
+
 ```ts
 P = lerp(P0, P1, t)
 P = (1-t)P0 + tP1
 ```
 
-
-### 二次Bézier curves
+### 二次 Bézier curves
 
 如果我们添加一个新的点
 
 把 两条线段的 P 点连接起来
 
 我们在继续从这条线段增加一个 P 点
-t 的value 也可以发生变化
+t 的 value 也可以发生变化
 这样就形成了 二次 贝塞尔
-
 
 继续添加一个点 形成三条线段 三条线段又有各自的 t 点
 
@@ -64,7 +62,6 @@ t 的value 也可以发生变化
 https://juejin.cn/post/6844903774117429261#comment
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ec12bf2b8524180895e4c2d065fd6f3~tplv-k3u1fbpfcp-watermark.image?)
-
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ec12bf2b8524180895e4c2d065fd6f3~tplv-k3u1fbpfcp-watermark.image?)
 
@@ -97,4 +94,3 @@ https://juejin.cn/post/6844903774117429261#comment
 <img width="1396" alt="image" src="https://user-images.githubusercontent.com/66500121/213360823-f825bba3-6172-4c35-8ea9-ebb75f9a422d.png">
 
 <img width="1302" alt="image" src="https://user-images.githubusercontent.com/66500121/213360830-18896cd8-b6bf-4d39-afc6-e8dc2ccdad05.png">
-

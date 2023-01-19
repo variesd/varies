@@ -125,16 +125,12 @@ Q0 就是我们需要的值 然后我们追踪 Q0 的路径
 
 第一个点和最后一个点 P0 P2 也是曲线的端点 获得的就是一条曲线
 
-![image](https://user-images.githubusercontent.com/66500121/213387516-218adaf9-a9a2-41a4-a52c-69341fe9f2e0.png)
-
-
 三次 Bézier Curve 曲线
 
 我们需要添加一个 P3 点，连接 P2
 
 在 P3 和 P2 之间进行线性插值 找到端点所有 t 的线性插值
 
-
-![image](https://user-images.githubusercontent.com/66500121/213387914-f7edeadf-8383-45b7-81f1-16b379dd6250.png)
+![image](https://user-images.githubusercontent.com/66500121/213388533-85b74aaf-e7d3-456e-b39b-32c0d599dde2.png)
 
 三次贝塞尔曲线就是 两个二次贝塞尔曲线的线性插值

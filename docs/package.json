@@ -3,8 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "vitepress dev .",
-    "build:docs": "vitepress build ."
+    "dev": "vitepress --port 3333 --open",
+    "build": "nr prefetch && vitepress build && node .vitepress/scripts/build-pwa.mjs",
+    "build:docs": "vitepress build && node .vitepress/scripts/build-pwa.mjs",
+    "serve": "vitepress serve",
+    "preview-https": "pnpm run build && serve .vitepress/dist",
+    "preview-https-no-prefetch": "pnpm run build-no-prefetch && serve .vitepress/dist",
+    "prefetch": "esno .vitepress/scripts/fetch-avatars.ts"
   },
   "dependencies": {
     "@vueuse/core": "^9.10.0",
@@ -12,7 +17,6 @@
     "vue": "latest"
   },
   "devDependencies": {
-    "sass": "^1.57.1",
     "@iconify-json/carbon": "^1.1.13",
     "@unocss/reset": "^0.48.3",
     "@vitejs/plugin-vue": "latest",

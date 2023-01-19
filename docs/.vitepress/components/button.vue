@@ -14,7 +14,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 .button {
   font-weight: bold;
   height: 50px;
@@ -27,11 +27,10 @@ export default {
   position: relative;
   z-index: 0;
   border-radius: 10px;
-  &-content {
-    padding: 0 26px;
-  }
 }
-
+.button-content {
+  padding: 0 26px;
+}
 .button:before {
   content: '';
   background: linear-gradient(

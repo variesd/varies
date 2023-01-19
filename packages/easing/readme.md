@@ -1,6 +1,9 @@
 # The Beauty of Bézier Curves
 
 
+
+![911fcc8f17a81bd9ae5d9874ee680c5.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0955c60a081f4d82a30944cb2ccff016~tplv-k3u1fbpfcp-watermark.image?)
+
 ## The Ever so Lovely Bézier Curve
 ### What is a Bezier curve?
 
@@ -60,6 +63,5 @@ t 的value 也可以发生变化
 
 https://juejin.cn/post/6844903774117429261#comment
 
-![911fcc8f17a81bd9ae5d9874ee680c5.png](https://p6-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/0955c60a081f4d82a30944cb2ccff016~tplv-k3u1fbpfcp-watermark.image?)
 
 ![image.png](https://p1-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/7ec12bf2b8524180895e4c2d065fd6f3~tplv-k3u1fbpfcp-watermark.image?)

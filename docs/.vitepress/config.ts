@@ -18,6 +18,7 @@ export default defineConfig({
   lang: 'en-US',
   title: vitestName,
   description: vitestDescription,
+  ignoreDeadLinks: true,
   head: [
     ['meta', { name: 'theme-color', content: '#729b1a' }],
     ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],

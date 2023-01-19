@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vitepress dev .",
-    "docs:api": "node run-typedoc.js",
-    "docs:build": "vitepress build ."
+    "build:docs": "vitepress build ."
   },
   "dependencies": {
     "@vueuse/core": "^9.10.0",

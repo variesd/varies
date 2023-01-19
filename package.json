@@ -8,7 +8,7 @@
     "build": "turbo run build --filter=\"@variesd/*\"",
     "build:watch": "turbo run build:watch",
     "doc": "turbo run dev --filter docs --no-daemon",
-    "build:docs": "turbo run build:variesd --filter docs",
+    "build:docs": "turbo run build:docs --filter docs",
     "clean": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
     "play": "pnpm dev --filter playground --no-daemon",
     "lint": "turbo run lint",

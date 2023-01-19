@@ -1,6 +1,5 @@
 ---
-home: true
-page: true
+layout: home
 title: Animation Library - Use Animation Library Simple With Easy
 footer: MIT Licensed | Copyright © 2023-present ErKelost
 ---
@@ -9,4 +8,4 @@ footer: MIT Licensed | Copyright © 2023-present ErKelost
 import Home from './.vitepress/components/home.vue'
 </script>
 
-<Home />
+<!-- <Home /> -->

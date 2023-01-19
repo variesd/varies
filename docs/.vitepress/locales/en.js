@@ -1,6 +1,6 @@
 export default {
   vitepressConfig: {
-    title: 'qweqwe',
+    title: '',
     lang: 'en-US',
     description: 'The Vue Store that you will enjoy using',
   },

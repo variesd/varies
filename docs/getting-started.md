@@ -1,7 +1,4 @@
-<!-- ## Installation
-
-<VueMasteryLogoLink for="pinia-cheat-sheet">
-</VueMasteryLogoLink>
+## Installation
 
 Install `pinia` with your favorite package manager:
 
@@ -45,7 +42,7 @@ new Vue({
   // ...
   // note the same `pinia` instance can be used across multiple Vue apps on
   // the same page
-  pinia,
+  pinia
 })
 ```
 
@@ -61,4 +58,4 @@ A store should contain data that can be accessed throughout your application. Th
 
 On the other hand, you should avoid including in the store local data that could be hosted in a component instead, e.g. the visibility of an element local to a page.
 
-Not all applications need access to a global state, but if yours need one, Pinia will make your life easier. -->
+Not all applications need access to a global state, but if yours need one, Pinia will make your life easier.

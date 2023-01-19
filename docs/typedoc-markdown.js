@@ -3,7 +3,7 @@ const path = require('path')
 const TypeDoc = require('typedoc')
 const { PageEvent } = TypeDoc
 const {
-  prependYAML,
+  prependYAML
 } = require('typedoc-plugin-markdown/dist/utils/front-matter')
 
 const fs = _fs.promises
@@ -16,7 +16,7 @@ const DEFAULT_OPTIONS = {
   out: path.resolve(__dirname, './api'),
   entryDocument: 'index.md',
   hideBreadcrumbs: false,
-  hideInPageTOC: true,
+  hideInPageTOC: true
 }
 
 /**
@@ -26,7 +26,7 @@ const DEFAULT_OPTIONS = {
 exports.createTypeDocApp = function createTypeDocApp(config = {}) {
   const options = {
     ...DEFAULT_OPTIONS,
-    ...config,
+    ...config
   }
 
   const app = new TypeDoc.Application()
@@ -50,7 +50,7 @@ exports.createTypeDocApp = function createTypeDocApp(config = {}) {
           sidebar: 'auto',
           // TODO: figure out a way to point to the source files?
           editLinks: false,
-          sidebarDepth: 3,
+          sidebarDepth: 3
         })
       }
     }
@@ -100,7 +100,7 @@ exports.createTypeDocApp = function createTypeDocApp(config = {}) {
      */
     setTargetMode(command) {
       targetMode = command
-    },
+    }
   }
 }
 

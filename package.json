@@ -1,5 +1,6 @@
 {
   "name": "variesd",
+  "version": "0.0.21",
   "author": "erkelost",
   "scripts": {
     "dev": "turbo run dev",

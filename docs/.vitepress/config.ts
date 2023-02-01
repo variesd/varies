@@ -73,9 +73,9 @@ export default defineConfig({
     },
 
     algolia: {
-      appId: 'ZTF29HGJ69',
-      apiKey: '9c3ced6fed60d2670bb36ab7e8bed8bc',
-      indexName: 'vitest'
+      appId: 'UXAGX7LTJC',
+      apiKey: '46dbb98bb8d8f7c7f5d6f04544e8a40a',
+      indexName: 'variesd-spring'
       // searchParameters: {
       //   facetFilters: ['tags:en'],
       // },

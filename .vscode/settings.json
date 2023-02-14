@@ -17,7 +17,8 @@
     "preinstall",
     "tsup",
     "variesd",
-    "vitepress"
+    "vitepress",
+    "vitesse"
   ],
   "githubPullRequests.ignoredPullRequestBranches": ["main"]
 }

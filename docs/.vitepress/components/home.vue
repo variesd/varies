@@ -79,6 +79,8 @@ import Button from './button.vue'
 <style scoped>
 .get-started {
   display: flex;
+  font-size: 18px;
+  font-weight: bold;
 }
 section {
   padding: 42px 32px;
@@ -98,13 +100,14 @@ section {
   margin: 0px auto;
 }
 
-html:not(.dark) .accent,
+.accent,
 .dark .tagline {
   background: -webkit-linear-gradient(315deg, #e76dbe 25%, #4423d4);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: hue 4.5s linear infinite;
+  font-weight: bold;
 }
 @keyframes hue {
   0% {
@@ -121,13 +124,14 @@ html:not(.dark) .accent,
   color: var(--vt-c-text-2);
   transition: color 0.5s;
   font-size: 22px;
-  margin: 24px auto 40px;
+  margin: 54px auto 40px;
 }
 .actions {
   display: flex;
   justify-content: center;
   gap: 35px;
 }
+
 /* .actions a {
   font-size: 16px;
   display: inline-block;
@@ -171,9 +175,11 @@ html:not(.dark) .accent,
   background-color: var(--vt-c-red-light);
 } */
 
-/* .actions .setup {
+.actions .setup {
   border: 1px solid var(--vt-c-red-light);
   color: var(--vt-c-text-code);
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .actions .setup:hover {
@@ -183,7 +189,7 @@ html:not(.dark) .accent,
 
 .dark .actions .setup:hover {
   background-color: var(--vt-c-gray-dark-3);
-} */
+}
 
 #special-sponsor {
   border-top: 1px solid var(--vt-c-divider-light);
@@ -194,10 +200,10 @@ html:not(.dark) .accent,
 
 #special-sponsor span {
   color: var(--vt-c-text-2);
-  font-weight: 500;
-  font-size: 13px;
+  font-weight: bold;
   vertical-align: middle;
   margin: 0 24px;
+  font-size: 18px;
 }
 
 #special-sponsor img {

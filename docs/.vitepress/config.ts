@@ -19,13 +19,13 @@ export default defineConfig({
   description: vitestDescription,
   ignoreDeadLinks: true,
   head: [
-    ['meta', { name: 'theme-color', content: '#729b1a' }],
-    ['link', { rel: 'icon', href: '/logo.svg', type: 'image/svg+xml' }],
+    ['meta', { name: 'theme-color', content: '#ffbbaa' }],
+    ['link', { rel: 'icon', href: '/logo-night.png', type: 'image/svg+xml' }],
     [
       'link',
       {
         rel: 'alternate icon',
-        href: '/favicon.ico',
+        href: '/logo-light.png',
         type: 'image/png',
         sizes: '16x16'
       }
@@ -47,7 +47,7 @@ export default defineConfig({
     ['meta', { name: 'twitter:image', content: ogImage }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['link', { href: font, rel: 'stylesheet' }],
-    ['link', { rel: 'mask-icon', href: '/logo.svg', color: '#ffffff' }],
+    ['link', { rel: 'mask-icon', href: '/logo-light.png', color: '#ffffff' }],
     [
       'link',
       {
@@ -65,10 +65,10 @@ export default defineConfig({
     }
   },
   themeConfig: {
-    logo: '/logo.svg',
+    logo: '/logo-light.png',
 
     editLink: {
-      pattern: 'https://github.com/vitest-dev/vitest/tree/main/docs/:path',
+      pattern: 'https://github.com/variesd/varies/tree/main/docs/:path',
       text: 'Suggest changes to this page'
     },
 
@@ -94,8 +94,7 @@ export default defineConfig({
 
     footer: {
       message: 'Released under the MIT License.',
-      copyright:
-        'Copyright © 2021-PRESENT Anthony Fu, Matías Capeletto and Vitest contributors'
+      copyright: 'Copyright © 2021-PRESENT ERKELOST'
     },
 
     nav: [
@@ -124,7 +123,7 @@ export default defineConfig({
           text: 'Guide',
           items: [
             {
-              text: 'Why Vitest',
+              text: 'Why vitest',
               link: '/guide/why'
             },
             {
@@ -160,7 +159,7 @@ export default defineConfig({
               link: '/guide/testing-types'
             },
             {
-              text: 'Vitest UI',
+              text: 'vitest UI',
               link: '/guide/ui'
             },
             {

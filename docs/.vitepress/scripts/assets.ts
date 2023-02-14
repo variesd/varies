@@ -27,7 +27,7 @@ export const optimizePages = async (pwa: boolean) => {
     names.map(async (i) => {
       let html = await fs.readFile(i, 'utf-8')
 
-      let prefetchImg = '\n\t<link rel="prefetch" href="/logo.svg">'
+      let prefetchImg = '\n\t<link rel="prefetch" href="/logo-light.png">'
 
       let usePreconnect = preconnect
 

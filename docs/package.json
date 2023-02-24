@@ -2,6 +2,7 @@
   "name": "docs",
   "version": "0.0.21",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vitepress --port 3333",
     "build:docs": "vitepress build && node .vitepress/scripts/build-pwa.mjs",

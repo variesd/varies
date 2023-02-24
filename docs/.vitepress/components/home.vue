@@ -5,6 +5,7 @@
 
 <template>
   <section id="hero">
+    <TheExperience />
     <h1 class="tagline">
       Use
       <span class="accent"> Animation Library</span>
@@ -74,6 +75,7 @@
   <!-- <NewsLetter /> -->
 </template>
 <script lang="ts">
+import TheExperience from './portal-journey/TheExperience.vue';
 import Button from './button.vue'
 </script>
 <style scoped>

@@ -3,7 +3,7 @@
   "version": "0.0.21",
   "private": true,
   "scripts": {
-    "dev": "vitepress --port 3333 --open",
+    "dev": "vitepress --port 3333",
     "build:docs": "vitepress build && node .vitepress/scripts/build-pwa.mjs",
     "serve": "vitepress serve",
     "preview-https-no-prefetch": "pnpm run build:docs && serve .vitepress/dist"
@@ -20,12 +20,17 @@
     "esno": "^0.16.3",
     "fast-glob": "^3.2.12",
     "fs-extra": "^10.1.0",
+    "@tresjs/cientos": "^1.7.0",
+    "@tresjs/core": "^1.7.0",
     "https-localhost": "^4.7.1",
-    "unocss": "^0.48.3",
+    "unocss": "^0.49.7",
+    "three": "^0.149.0",
+    "gsap": "^3.11.4",
+    "vite-plugin-glsl": "^1.1.2",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.0",
     "vite-plugin-pwa": "0.14.1",
-    "vitepress": "1.0.0-alpha.36",
+    "vitepress": "1.0.0-alpha.47",
     "workbox-window": "^6.5.4"
   }
 }

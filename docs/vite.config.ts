@@ -3,6 +3,7 @@ import type { Plugin } from 'vite'
 import { defineConfig } from 'vite'
 import Components from 'unplugin-vue-components/vite'
 import Unocss from 'unocss/vite'
+import glsl from 'vite-plugin-glsl'
 import { presetAttributify, presetIcons, presetUno } from 'unocss'
 import { resolve } from 'pathe'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -53,6 +54,7 @@ export default defineConfig({
       ]
     }) as unknown as Plugin,
     IncludesPlugin(),
+    glsl(),
     VitePWA({
       outDir: '.vitepress/dist',
       registerType: 'autoUpdate',

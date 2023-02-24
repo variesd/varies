@@ -2,13 +2,14 @@
   "name": "@variesd/easing",
   "version": "0.0.21",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.mjs",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsup --watch"
   },
   "keywords": [],
   "author": "",

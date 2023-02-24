@@ -1,6 +1,8 @@
 import { h } from 'vue'
+import type { App } from 'vue'
 import Theme from 'vitepress/theme'
 import { inBrowser } from 'vitepress'
+import tres from '@tresjs/core'
 import '../style/main.css'
 import '../style/vars.css'
 import 'uno.css'
@@ -14,5 +16,8 @@ export default {
     return h(Theme.Layout, null, {
       'home-features-after': () => h(HomePage)
     })
+  },
+  enhanceApp({app}) {
+    app.use(tres)
   }
 }

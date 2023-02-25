@@ -13,7 +13,7 @@ importers:
       '@types/js-yaml': ^4.0.5
       '@types/node': ^18.14.1
       '@types/prettier': ^2.7.2
-      bumpp: ^8.2.1
+      bumpp: ^9.0.0
       commitlint: ^17.4.4
       consola: ^2.15.3
       cross-env: ^7.0.3
@@ -42,7 +42,7 @@ importers:
       '@types/js-yaml': 4.0.5
       '@types/node': 18.14.1
       '@types/prettier': 2.7.2
-      bumpp: 8.2.1
+      bumpp: 9.0.0
       commitlint: 17.4.4
       consola: 2.15.3
       cross-env: 7.0.3
@@ -94,7 +94,7 @@ importers:
       vue: 3.2.47
     devDependencies:
       '@iconify-json/carbon': 1.1.16
-      '@tresjs/cientos': 1.7.0_xfijwtvpffppczrbyqr2tcvuk4
+      '@tresjs/cientos': 1.7.0_three@0.149.0+vue@3.2.47
       '@tresjs/core': 1.7.0_three@0.149.0+vue@3.2.47
       '@unocss/reset': 0.48.5
       '@vitejs/plugin-vue': 4.0.0_vite@4.1.1+vue@3.2.47
@@ -108,7 +108,7 @@ importers:
       unplugin-vue-components: 0.22.12_vue@3.2.47
       vite: 4.1.1
       vite-plugin-glsl: 1.1.2_vite@4.1.1
-      vite-plugin-pwa: 0.14.1_xp2zqafvd45jbxqxxvnpcv3lzm
+      vite-plugin-pwa: 0.14.1_vite@4.1.1
       vitepress: 1.0.0-alpha.47
       workbox-window: 6.5.4
 
@@ -3101,10 +3101,9 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /@tresjs/cientos/1.7.0_xfijwtvpffppczrbyqr2tcvuk4:
+  /@tresjs/cientos/1.7.0_three@0.149.0+vue@3.2.47:
     resolution: {integrity: sha512-bPvnZYHscY4CHXKRxuEDFADnFIJXGPCv0S7nY3FLSv7AxQorPr4mOhDmXkcB0FRkgKNPmJvPFVheLDxdO4V6xg==}
     peerDependencies:
-      '@tresjs/core': ^1.7.0
       three: latest
       vue: ^3.2.47
     dependencies:
@@ -3112,6 +3111,8 @@ packages:
       three: 0.149.0
       three-stdlib: 2.21.8_three@0.149.0
       vue: 3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
     dev: true
 
   /@tresjs/core/1.7.0_three@0.149.0+vue@3.2.47:
@@ -4138,15 +4139,14 @@ packages:
       semver: 7.3.8
     dev: true
 
-  /bumpp/8.2.1:
-    resolution: {integrity: sha512-4tHKsWC2mqHQvdjZ4AXgVhS2xMsz8qQ4zYt87vGRXW5tqAjrYa/UJqy7s/dGYI2OIe9ghBdiFhKpyKEX9SXffg==}
+  /bumpp/9.0.0:
+    resolution: {integrity: sha512-I2+JLFQin46NioHg6wi23hYQMVExiJyGblARp5fIHUzLv3rRz9me38eUe2xlQCAl7Ys9X+SlhTaIkttTxiL6cQ==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
       '@jsdevtools/ez-spawn': 3.0.4
       cac: 6.7.14
       fast-glob: 3.2.12
-      kleur: 4.1.5
       prompts: 2.4.2
       semver: 7.3.8
     dev: true
@@ -4509,8 +4509,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      JSONStream: 1.3.5
       is-text-path: 1.0.1
+      JSONStream: 1.3.5
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -7001,11 +7001,6 @@ packages:
 
   /kleur/3.0.3:
     resolution: {integrity: sha512-eTIzlVOSUR+JxdDFepEYcBMtZ9Qqdef+rnzWdRZuMbOywu5tO2w2N7rqjoANZ5k9vywhL6Br1VRjUIgTQx4E8w==}
-    engines: {node: '>=6'}
-    dev: true
-
-  /kleur/4.1.5:
-    resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
     dev: true
 
@@ -10027,11 +10022,10 @@ packages:
       - rollup
     dev: true
 
-  /vite-plugin-pwa/0.14.1_xp2zqafvd45jbxqxxvnpcv3lzm:
+  /vite-plugin-pwa/0.14.1_vite@4.1.1:
     resolution: {integrity: sha512-5zx7yhQ8RTLwV71+GA9YsQQ63ALKG8XXIMqRJDdZkR8ZYftFcRgnzM7wOWmQZ/DATspyhPih5wCdcZnAIsM+mA==}
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0
-      workbox-window: ^6.5.4
     dependencies:
       '@rollup/plugin-replace': 5.0.2_rollup@3.15.0
       debug: 4.3.4
@@ -10141,7 +10135,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.15.0
+      rollup: 3.17.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

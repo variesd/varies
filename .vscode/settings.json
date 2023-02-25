@@ -1,19 +1,30 @@
 {
   "cSpell.words": [
+    "ˈbɛz",
+    "Attributify",
+    "Bézier",
     "bumpp",
+    "cientos",
     "commitlint",
     "consola",
+    "Curze",
     "demi",
     "erkelost",
     "esno",
+    "glsl",
+    "gsap",
+    "Holmér",
     "iife",
+    "lerp",
+    "lerps",
     "postplop",
     "preinstall",
+    "tresjs",
     "tsup",
+    "unocss",
     "variesd",
-    "vitepress"
+    "vitepress",
+    "vitesse"
   ],
-  "githubPullRequests.ignoredPullRequestBranches": [
-    "main"
-  ]
+  "githubPullRequests.ignoredPullRequestBranches": ["main"]
 }

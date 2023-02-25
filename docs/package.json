@@ -1,67 +1,37 @@
 {
   "name": "docs",
-  "version": "1.0.0",
-  "description": "Use Animation Library Simple With Easy.",
-  "main": "src/index.ts",
-  "exports": {
-    ".": "./src/index.ts",
-    "./config": "./src/vitepress/config/baseConfig.js",
-    "./highlight": "./src/vitepress/config/highlight.js"
-  },
+  "version": "0.0.21",
   "private": true,
-  "files": [
-    "src",
-    "types"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/variesd"
-  },
-  "keywords": [
-    "cli",
-    "Front end architecture"
-  ],
-  "author": "ERKELOST",
-  "license": "MIT",
-  "homepage": "https://github.com/erkelost",
-  "bugs": {
-    "url": "https://github.com/variesd"
-  },
+  "type": "module",
   "scripts": {
-    "test": "yarn lint && yarn type",
-    "dev": "vitepress dev varies --port 6173",
-    "build:variesd": "vitepress build varies",
-    "serve": "yarn varies-build && vitepress serve varies",
-    "lint": "prettier --check --write --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
-    "lint:fail": "prettier --check --parser typescript \"{__tests__,docs,src,types}/**/*.ts\"",
-    "type": "tsc --noEmit"
+    "dev": "vitepress --port 3333",
+    "build:docs": "vitepress build && node .vitepress/scripts/build-pwa.mjs",
+    "serve": "vitepress serve",
+    "preview-https-no-prefetch": "pnpm run build:docs && serve .vitepress/dist"
   },
   "dependencies": {
-    "@docsearch/css": "^3.3.0",
-    "@docsearch/js": "^3.3.0",
-    "@vueuse/core": "^9.9.0",
-    "body-scroll-lock": "^3.1.5",
-    "gsap": "^3.9.1",
-    "normalize.css": "^8.0.1",
-    "shiki": "^0.9.15",
-    "three": "^0.148.0"
+    "@vueuse/core": "^9.10.0",
+    "jiti": "^1.16.1",
+    "vue": "latest"
   },
   "devDependencies": {
-    "@types/body-scroll-lock": "^2.6.1",
-    "prettier": "^2.4.1",
-    "sass": "^1.57.1",
-    "typescript": "~4.3.5",
-    "vitepress": "1.0.0-alpha.33",
-    "vue": "^3.2.26"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search",
-        "react",
-        "react-dom",
-        "@types/react"
-      ]
-    }
+    "@iconify-json/carbon": "latest",
+    "@unocss/reset": "^0.48.3",
+    "@vitejs/plugin-vue": "latest",
+    "esno": "^0.16.3",
+    "fast-glob": "^3.2.12",
+    "fs-extra": "^10.1.0",
+    "@tresjs/cientos": "^1.7.0",
+    "@tresjs/core": "^1.7.0",
+    "https-localhost": "^4.7.1",
+    "unocss": "^0.49.7",
+    "three": "^0.149.0",
+    "gsap": "^3.11.4",
+    "vite-plugin-glsl": "^1.1.2",
+    "unplugin-vue-components": "^0.22.12",
+    "vite": "^4.0.0",
+    "vite-plugin-pwa": "0.14.1",
+    "vitepress": "1.0.0-alpha.47",
+    "workbox-window": "^6.5.4"
   }
 }

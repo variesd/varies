@@ -25,7 +25,7 @@ export interface AnimationOptions {
   to: toType
   duration?: number
   delay?: number
-  easing?: easingType
+  easingType?: easingType
   onStart?: startFunc
   onUpdate?: updateFunc
   onFinish?: finishFunc
@@ -33,23 +33,46 @@ export interface AnimationOptions {
 
 export class Tween {
   from: fromType
+
   to: toType
+
   duration?: number
+
   delay?: number
+
   easing?: easingType
+
   onStart?: startFunc
+
   onUpdate?: updateFunc
+
   onFinish?: finishFunc
+
   startTime?: number
+
   started?: boolean
+
   finished?: boolean
+
   timer?: null | number
+
   time?: number
+
   elapsed?: number
+
   keys?: any
+
   constructor(options: AnimationOptions) {
-    const { from, to, duration, delay, easing, onStart, onUpdate, onFinish } =
-      options
+    const {
+      from,
+      to,
+      duration,
+      delay,
+      easingType,
+      onStart,
+      onUpdate,
+      onFinish
+    } = options
     for (const key in from) {
       if (to[key] === undefined) {
         to[key] = from[key]
@@ -66,7 +89,7 @@ export class Tween {
     this.to = to
     this.duration = duration
     this.delay = delay
-    this.easing = easing
+    this.easing = easingType
     this.onStart = onStart
     this.onUpdate = onUpdate
     this.onFinish = onFinish
@@ -90,6 +113,7 @@ export class Tween {
     if (this.elapsed === this.duration) {
       if (!this.finished) {
         this.finished = true
+        // eslint-disable-next-line no-unused-expressions
         this.onFinish && this.onFinish(this.keys)
       }
       return
@@ -99,13 +123,16 @@ export class Tween {
     // 防止 时间 一直 流逝 ~
     this.elapsed = this.elapsed > this.duration ? this.duration : this.elapsed
     // 从0 到 1 elapsed time
+    // eslint-disable-next-line guard-for-in
     for (const key in this.to) {
       this.keys[key] =
         this.from[key] +
         (this.to[key] - this.from[key]) *
+          // eslint-disable-next-line import/namespace
           easing[this.easing](this.elapsed / this.duration)
     }
     if (!this.started) {
+      // eslint-disable-next-line no-unused-expressions
       this.onStart && this.onStart(this.keys)
       this.started = true
     }

@@ -2,16 +2,30 @@
   "compilerOptions": {
     "baseUrl": ".",
     "module": "esnext",
-    "moduleResolution": "node",
+    "target": "esnext",
+    "lib": ["DOM", "ESNext"],
     "strict": true,
+    "jsx": "preserve",
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
     "noUnusedLocals": true,
-    "lib": ["ESNext", "DOM"],
-    "types": ["vite/client"],
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "vite/client",
+      "vite-plugin-pwa/client",
+      "vitepress"
+    ],
     "paths": {
-      "@vue/theme": ["src/index.ts"]
+      "~/*": ["src/*"]
     }
   },
-  "include": ["src", "types", "varies/.vitepress/theme"],
-  "exclude": ["node_modules"]
+  "include": [
+    "./*.ts",
+    "./.vitepress/**/*.ts",
+    "./.vitepress/**/*.vue"
+  ],
+  "exclude": ["dist", "node_modules"]
 }

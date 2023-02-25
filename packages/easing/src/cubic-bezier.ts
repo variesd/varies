@@ -1,4 +1,3 @@
-import { noopReturn } from './cubic-bezier';
 /**
  *  A Bézier curve (/ˈbɛz.i.eɪ/ BEH-zee-ay)[1] is a parametric curve used in computer graphics and related
  *  fields.[2] A set of discrete "control points" defines a smooth, continuous curve by means of a formula.
@@ -29,6 +28,8 @@ const calcBezier = (t: number, a1: number, a2: number) =>
 const subdivisionPrecision = 0.0000001
 const subdivisionMaxIterations = 12
 
+export const noopReturn = <V>(v: V) => v
+
 function binarySubdivide(
   x: number,
   lowerBound: number,
@@ -55,15 +56,13 @@ function binarySubdivide(
 
   return currentT
 }
-function noopReturn<T> () {
-
-}
 export function cubicBezier(
   mX1: number,
   mY1: number,
   mX2: number,
   mY2: number
 ) {
+  // x 0 0 y 1 1
   // If this is a linear gradient, return linear easing
   if (mX1 === mY1 && mX2 === mY2) return noopReturn
 

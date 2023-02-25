@@ -1,29 +1,29 @@
 {
-  "hash": "4f8bcc7c",
-  "browserHash": "93e938ef",
+  "hash": "e2b28085",
+  "browserHash": "a43cd7ee",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/.pnpm/vue@3.2.47/node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "15ffadce",
-      "needsInterop": false
-    },
-    "@tresjs/cientos": {
-      "src": "../../../../node_modules/.pnpm/@tresjs+cientos@1.7.0_xfijwtvpffppczrbyqr2tcvuk4/node_modules/@tresjs/cientos/dist/trescientos.js",
-      "file": "@tresjs_cientos.js",
-      "fileHash": "ae997c62",
-      "needsInterop": false
-    },
-    "three": {
-      "src": "../../../../node_modules/.pnpm/three@0.149.0/node_modules/three/build/three.module.js",
-      "file": "three.js",
-      "fileHash": "a027f82a",
+      "fileHash": "846baa21",
       "needsInterop": false
     },
     "@tresjs/core": {
       "src": "../../../../node_modules/.pnpm/@tresjs+core@1.7.0_three@0.149.0+vue@3.2.47/node_modules/@tresjs/core/dist/tres.js",
       "file": "@tresjs_core.js",
-      "fileHash": "e29e6fda",
+      "fileHash": "77709ccb",
+      "needsInterop": false
+    },
+    "@tresjs/cientos": {
+      "src": "../../../../node_modules/.pnpm/@tresjs+cientos@1.7.0_xfijwtvpffppczrbyqr2tcvuk4/node_modules/@tresjs/cientos/dist/trescientos.js",
+      "file": "@tresjs_cientos.js",
+      "fileHash": "704f5426",
+      "needsInterop": false
+    },
+    "three": {
+      "src": "../../../../node_modules/.pnpm/three@0.149.0/node_modules/three/build/three.module.js",
+      "file": "three.js",
+      "fileHash": "d4652f69",
       "needsInterop": false
     }
   },

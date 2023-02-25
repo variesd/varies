@@ -20,7 +20,7 @@
     "@vitejs/plugin-vue": "latest",
     "esno": "^0.16.3",
     "fast-glob": "^3.2.12",
-    "fs-extra": "^10.1.0",
+    "fs-extra": "^11.0.0",
     "@tresjs/cientos": "^1.7.0",
     "@tresjs/core": "^1.7.0",
     "https-localhost": "^4.7.1",

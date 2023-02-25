@@ -9,7 +9,7 @@ importers:
     specifiers:
       '@commitlint/cli': ^17.4.4
       '@commitlint/config-conventional': ^17.4.4
-      '@types/fs-extra': ^9.0.13
+      '@types/fs-extra': ^11.0.0
       '@types/js-yaml': ^4.0.5
       '@types/node': ^18.14.1
       '@types/prettier': ^2.7.2
@@ -38,7 +38,7 @@ importers:
     devDependencies:
       '@commitlint/cli': 17.4.4
       '@commitlint/config-conventional': 17.4.4
-      '@types/fs-extra': 9.0.13
+      '@types/fs-extra': 11.0.1
       '@types/js-yaml': 4.0.5
       '@types/node': 18.14.1
       '@types/prettier': 2.7.2
@@ -75,7 +75,7 @@ importers:
       '@vueuse/core': ^9.10.0
       esno: ^0.16.3
       fast-glob: ^3.2.12
-      fs-extra: ^10.1.0
+      fs-extra: ^11.0.0
       gsap: ^3.11.4
       https-localhost: ^4.7.1
       jiti: ^1.16.1
@@ -94,13 +94,13 @@ importers:
       vue: 3.2.47
     devDependencies:
       '@iconify-json/carbon': 1.1.16
-      '@tresjs/cientos': 1.7.0_xfijwtvpffppczrbyqr2tcvuk4
+      '@tresjs/cientos': 1.7.0_three@0.149.0+vue@3.2.47
       '@tresjs/core': 1.7.0_three@0.149.0+vue@3.2.47
       '@unocss/reset': 0.48.5
       '@vitejs/plugin-vue': 4.0.0_vite@4.1.1+vue@3.2.47
       esno: 0.16.3
       fast-glob: 3.2.12
-      fs-extra: 10.1.0
+      fs-extra: 11.1.0
       gsap: 3.11.4
       https-localhost: 4.7.1
       three: 0.149.0
@@ -108,7 +108,7 @@ importers:
       unplugin-vue-components: 0.22.12_vue@3.2.47
       vite: 4.1.1
       vite-plugin-glsl: 1.1.2_vite@4.1.1
-      vite-plugin-pwa: 0.14.1_xp2zqafvd45jbxqxxvnpcv3lzm
+      vite-plugin-pwa: 0.14.1_vite@4.1.1
       vitepress: 1.0.0-alpha.47
       workbox-window: 6.5.4
 
@@ -3101,10 +3101,9 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /@tresjs/cientos/1.7.0_xfijwtvpffppczrbyqr2tcvuk4:
+  /@tresjs/cientos/1.7.0_three@0.149.0+vue@3.2.47:
     resolution: {integrity: sha512-bPvnZYHscY4CHXKRxuEDFADnFIJXGPCv0S7nY3FLSv7AxQorPr4mOhDmXkcB0FRkgKNPmJvPFVheLDxdO4V6xg==}
     peerDependencies:
-      '@tresjs/core': ^1.7.0
       three: latest
       vue: ^3.2.47
     dependencies:
@@ -3112,6 +3111,8 @@ packages:
       three: 0.149.0
       three-stdlib: 2.21.8_three@0.149.0
       vue: 3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
     dev: true
 
   /@tresjs/core/1.7.0_three@0.149.0+vue@3.2.47:
@@ -3175,9 +3176,10 @@ packages:
     resolution: {integrity: sha512-WulqXMDUTYAXCjZnk6JtIHPigp55cVtDgDrO2gHRwhyJto21+1zbVCtOYB2L1F9w4qCQ0rOGWBnBe0FNTiEJIQ==}
     dev: true
 
-  /@types/fs-extra/9.0.13:
-    resolution: {integrity: sha512-nEnwB++1u5lVDM2UI4c1+5R+FYaKfaAzS4OococimjVm3nQw3TuzH5UNsocrcTBbhnerblyHj4A49qXbIiZdpA==}
+  /@types/fs-extra/11.0.1:
+    resolution: {integrity: sha512-MxObHvNl4A69ofaTRU8DFqvgzzv8s9yRtaPPm5gud9HDNvpB3GPQFvNuTWAI59B9huVGV5jXYJwbCsmBsOGYWA==}
     dependencies:
+      '@types/jsonfile': 6.1.1
       '@types/node': 18.14.1
     dev: true
 
@@ -3191,6 +3193,12 @@ packages:
 
   /@types/json5/0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: true
+
+  /@types/jsonfile/6.1.1:
+    resolution: {integrity: sha512-GSgiRCVeapDN+3pqA35IkQwasaCh/0YFH5dEF6S88iDvEn901DjOeH3/QPY+XYP1DFzDZPvIvfeEgk+7br5png==}
+    dependencies:
+      '@types/node': 18.14.1
     dev: true
 
   /@types/long/4.0.2:
@@ -4509,8 +4517,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      JSONStream: 1.3.5
       is-text-path: 1.0.1
+      JSONStream: 1.3.5
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -10027,11 +10035,10 @@ packages:
       - rollup
     dev: true
 
-  /vite-plugin-pwa/0.14.1_xp2zqafvd45jbxqxxvnpcv3lzm:
+  /vite-plugin-pwa/0.14.1_vite@4.1.1:
     resolution: {integrity: sha512-5zx7yhQ8RTLwV71+GA9YsQQ63ALKG8XXIMqRJDdZkR8ZYftFcRgnzM7wOWmQZ/DATspyhPih5wCdcZnAIsM+mA==}
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0
-      workbox-window: ^6.5.4
     dependencies:
       '@rollup/plugin-replace': 5.0.2_rollup@3.15.0
       debug: 4.3.4
@@ -10141,7 +10148,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.15.0
+      rollup: 3.17.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

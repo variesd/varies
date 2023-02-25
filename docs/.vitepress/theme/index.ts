@@ -17,7 +17,7 @@ export default {
       'home-features-after': () => h(HomePage)
     })
   },
-  enhanceApp({app}) {
+  enhanceApp({ app }) {
     app.use(tres)
   }
 }

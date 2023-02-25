@@ -13,13 +13,12 @@
 </template>
 
 <script setup lang="ts">
-import {cubicBezier} from '@variesd/easing'
+import { cubicBezier } from '@variesd/easing'
 import { ref } from 'vue'
 import { Statistic } from '@variesd/vue'
 const start = ref(true)
-const res = cubicBezier(0.2,0.5,0.6,0.3)(0)
-console.log(res);
-
+const res = cubicBezier(0.2, 0.5, 0.6, 0.3)(0)
+console.log(res)
 </script>
 
 <style lang="scss" scoped></style>

@@ -75,7 +75,7 @@
   <!-- <NewsLetter /> -->
 </template>
 <script lang="ts">
-import TheExperience from './portal-journey/TheExperience.vue';
+import TheExperience from './portal-journey/TheExperience.vue'
 import Button from './button.vue'
 </script>
 <style scoped>

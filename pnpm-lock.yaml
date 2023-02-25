@@ -70,7 +70,7 @@ importers:
       '@iconify-json/carbon': latest
       '@tresjs/cientos': ^1.7.0
       '@tresjs/core': ^1.7.0
-      '@unocss/reset': ^0.48.3
+      '@unocss/reset': ^0.50.0
       '@vitejs/plugin-vue': latest
       '@vueuse/core': ^9.10.0
       esno: ^0.16.3
@@ -94,9 +94,9 @@ importers:
       vue: 3.2.47
     devDependencies:
       '@iconify-json/carbon': 1.1.16
-      '@tresjs/cientos': 1.7.0_xfijwtvpffppczrbyqr2tcvuk4
+      '@tresjs/cientos': 1.7.0_three@0.149.0+vue@3.2.47
       '@tresjs/core': 1.7.0_three@0.149.0+vue@3.2.47
-      '@unocss/reset': 0.48.5
+      '@unocss/reset': 0.50.1
       '@vitejs/plugin-vue': 4.0.0_vite@4.1.1+vue@3.2.47
       esno: 0.16.3
       fast-glob: 3.2.12
@@ -108,7 +108,7 @@ importers:
       unplugin-vue-components: 0.22.12_vue@3.2.47
       vite: 4.1.1
       vite-plugin-glsl: 1.1.2_vite@4.1.1
-      vite-plugin-pwa: 0.14.1_xp2zqafvd45jbxqxxvnpcv3lzm
+      vite-plugin-pwa: 0.14.1_vite@4.1.1
       vitepress: 1.0.0-alpha.47
       workbox-window: 6.5.4
 
@@ -3101,10 +3101,9 @@ packages:
       string.prototype.matchall: 4.0.8
     dev: true
 
-  /@tresjs/cientos/1.7.0_xfijwtvpffppczrbyqr2tcvuk4:
+  /@tresjs/cientos/1.7.0_three@0.149.0+vue@3.2.47:
     resolution: {integrity: sha512-bPvnZYHscY4CHXKRxuEDFADnFIJXGPCv0S7nY3FLSv7AxQorPr4mOhDmXkcB0FRkgKNPmJvPFVheLDxdO4V6xg==}
     peerDependencies:
-      '@tresjs/core': ^1.7.0
       three: latest
       vue: ^3.2.47
     dependencies:
@@ -3112,6 +3111,8 @@ packages:
       three: 0.149.0
       three-stdlib: 2.21.8_three@0.149.0
       vue: 3.2.47
+    transitivePeerDependencies:
+      - '@vue/composition-api'
     dev: true
 
   /@tresjs/core/1.7.0_three@0.149.0+vue@3.2.47:
@@ -3480,12 +3481,12 @@ packages:
       '@unocss/preset-mini': 0.49.8
     dev: true
 
-  /@unocss/reset/0.48.5:
-    resolution: {integrity: sha512-+JJT3Btj1oNX4XwKBDPRUYre3NYBNmi0PsC3tqkHN2VphJG0iZl91XNfsveLz8pVpDJPUDdLH4xsqh52WmxU1g==}
-    dev: true
-
   /@unocss/reset/0.49.8:
     resolution: {integrity: sha512-QIEhXCDyYZvqfyzg/3UiiWw2B0rdJpvswDEWudnYLm0Z73NsOjgx6TQpOsfDRKqRnDF+N9Kbs7gs60O/WAwR8g==}
+    dev: true
+
+  /@unocss/reset/0.50.1:
+    resolution: {integrity: sha512-BcANWHHrKgHML5TLaPuSl148L2WLA938r0pLi4PrRTmZtkgP4OhBLs8U8BaDNVVGR/nli7VDxNRZFb9es3Tq9Q==}
     dev: true
 
   /@unocss/scope/0.49.8:
@@ -4509,8 +4510,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      JSONStream: 1.3.5
       is-text-path: 1.0.1
+      JSONStream: 1.3.5
       lodash: 4.17.21
       meow: 8.1.2
       split2: 3.2.2
@@ -10027,11 +10028,10 @@ packages:
       - rollup
     dev: true
 
-  /vite-plugin-pwa/0.14.1_xp2zqafvd45jbxqxxvnpcv3lzm:
+  /vite-plugin-pwa/0.14.1_vite@4.1.1:
     resolution: {integrity: sha512-5zx7yhQ8RTLwV71+GA9YsQQ63ALKG8XXIMqRJDdZkR8ZYftFcRgnzM7wOWmQZ/DATspyhPih5wCdcZnAIsM+mA==}
     peerDependencies:
       vite: ^3.1.0 || ^4.0.0
-      workbox-window: ^6.5.4
     dependencies:
       '@rollup/plugin-replace': 5.0.2_rollup@3.15.0
       debug: 4.3.4
@@ -10141,7 +10141,7 @@ packages:
       esbuild: 0.16.17
       postcss: 8.4.21
       resolve: 1.22.1
-      rollup: 3.15.0
+      rollup: 3.17.2
     optionalDependencies:
       fsevents: 2.3.2
     dev: true

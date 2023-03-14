@@ -59,6 +59,6 @@
       "vue-demi": "0.13.11"
     }
   },
-  "packageManager": "pnpm@7.2.1",
+  "packageManager": "pnpm@7.29.1",
   "files": []
 }

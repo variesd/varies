@@ -45,6 +45,7 @@
     "pnpm": "^7.27.1",
     "prettier": "latest",
     "rimraf": "^3.0.2",
+    "rollup": "^3.17.2",
     "tsup": "^6.6.3",
     "turbo": "latest",
     "typescript": "^4.9.5",

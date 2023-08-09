@@ -24,7 +24,7 @@
     "@tresjs/cientos": "^1.7.0",
     "@tresjs/core": "^1.7.0",
     "https-localhost": "^4.7.1",
-    "unocss": "^0.49.7",
+    "unocss": "^0.55.0",
     "three": "^0.149.0",
     "gsap": "^3.11.4",
     "vite-plugin-glsl": "^1.1.2",

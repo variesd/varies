@@ -34,7 +34,7 @@
     "esbuild": "^0.14.54",
     "eslint": "^8.34.0",
     "eslint-config-relaxed-ts": "^2.0.13",
-    "esno": "^0.16.3",
+    "esno": "^0.17.0",
     "export-size": "^0.5.2",
     "fast-glob": "^3.2.12",
     "firebase": "^9.17.1",

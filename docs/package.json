@@ -30,7 +30,7 @@
     "vite-plugin-glsl": "^1.1.2",
     "unplugin-vue-components": "^0.22.12",
     "vite": "^4.0.0",
-    "vite-plugin-pwa": "0.14.1",
+    "vite-plugin-pwa": "0.20.5",
     "vitepress": "1.0.0-alpha.47",
     "workbox-window": "^6.5.4"
   }

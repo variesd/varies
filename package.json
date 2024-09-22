@@ -31,7 +31,7 @@
     "commitlint": "^17.4.4",
     "consola": "^2.15.3",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.14.54",
+    "esbuild": "^0.24.0",
     "eslint": "^8.34.0",
     "eslint-config-relaxed-ts": "^2.0.13",
     "esno": "^0.16.3",
